@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="https://unpkg.com/rxjs@7.8.1/dist/bundles/rxjs.umd.min.js"></script>
+    <script>
+        const data$ = rxjs.range(1,20);
+
+        //一次讀取5筆資料
+        const page = 4; //6,7,8,9,10
+        data$.pipe(
+            //rxjs.toArray()
+           // rxjs.count()
+           rxjs.skipWhile((value, index)=>index<(page-1) * 5),
+           rxjs.take(5),
+           rxjs.toArray()
+        ).subscribe(datas=>console.log(datas));
+    </script>
+</body>
+</html>
