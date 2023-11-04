@@ -1,3 +1,4 @@
+import {student} from './student';
 // class User{
 //     firstName:string;
 //     lastName:string;
@@ -49,6 +50,8 @@ interface IUser{
     fullName():string;
 }
 
+
+@student({course:"Angular"})
 class User implements IUser{
     firstName:string;
     lastName:string;
@@ -64,5 +67,8 @@ class User implements IUser{
         return `${this.firstName} ${this.lastName}`
     }
 }
+
+let userA:User = new User("Jack", "Wu", 29);
+console.log(userA.course());
 
 
