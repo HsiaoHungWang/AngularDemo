@@ -11,6 +11,10 @@ module.exports = {
     title:'webpack dmeo',
     //filename:'abc.html'
     template:'./template.html'
- })]
+ })],
+ devServer:{
+   port:4200,
+   open:true
+ }
 
 }
