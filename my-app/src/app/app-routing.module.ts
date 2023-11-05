@@ -7,6 +7,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { GoalComponent } from './goal/goal.component';
 import { AwardComponent } from './award/award.component';
 import { HistoryComponent } from './history/history.component';
+import { MemberComponent } from './member/member.component';
+import { PersonalComponent } from './personal/personal.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 //URL > Component
 const routes: Routes = [  
@@ -21,6 +25,13 @@ const routes: Routes = [
 
   ]},
   {path:'contact',component:ContactComponent,title:'聯絡我們'},
+  {path:'member',component:MemberComponent,title:'會員中心',
+children:[
+  {path:'', component:PersonalComponent},
+  {path:'personal',component:PersonalComponent},
+  {path:'forget',component:ForgetpasswordComponent},
+  {path:'change',component:ChangepasswordComponent}
+]},
   {path:'**',component:PageNotFoundComponent}
   
 ];

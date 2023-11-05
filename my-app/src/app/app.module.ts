@@ -15,6 +15,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { GoalComponent } from './goal/goal.component';
 import { AwardComponent } from './award/award.component';
 import { HistoryComponent } from './history/history.component';
+import { MemberComponent } from './member/member.component';
+import { PersonalComponent } from './personal/personal.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 
 @NgModule({
@@ -31,7 +35,11 @@ import { HistoryComponent } from './history/history.component';
     PageNotFoundComponent,
     GoalComponent,
     AwardComponent,
-    HistoryComponent
+    HistoryComponent,
+    MemberComponent,
+    PersonalComponent,
+    ForgetpasswordComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,

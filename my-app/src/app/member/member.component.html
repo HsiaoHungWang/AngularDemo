@@ -1,0 +1,16 @@
+<h3>會員中心</h3>
+<div class="row">
+    <div class="col-3">
+        <div class="list-group">
+            <a routerLink="/member/personal" class="list-group-item list-group-item-action"  routerLinkActive="active">
+             個人資訊
+            </a>
+            <a routerLink="/member/forget" class="list-group-item list-group-item-action"  routerLinkActive="active">忘記密碼</a>
+            <a routerLink="/member/change" class="list-group-item list-group-item-action"  routerLinkActive="active">修改密碼</a>
+
+          </div>
+    </div>
+    <div class="col-9">
+        <router-outlet></router-outlet>
+    </div>
+</div>
