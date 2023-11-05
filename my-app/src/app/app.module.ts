@@ -12,6 +12,9 @@ import { XyzComponent } from './xyz.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GoalComponent } from './goal/goal.component';
+import { AwardComponent } from './award/award.component';
+import { HistoryComponent } from './history/history.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     XyzComponent,
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    GoalComponent,
+    AwardComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
