@@ -1,9 +1,9 @@
 <div class="container">
   <h2>Hello {{title}}!!</h2>
-  <first></first>
-  <app-second></app-second>
-  <app-home></app-home>
-  <app-about></app-about>
-  <app-contact></app-contact>
-  <abc></abc>
+  <a routerLink="/home" routerLinkActive="active">首頁</a> | 
+  <a routerLink="/about" routerLinkActive="active">關於我們</a> | 
+  <a routerLink="/contact" routerLinkActive="active">聯絡我們</a> | 
+  <hr />
+  <router-outlet></router-outlet>
+ 
 </div>
