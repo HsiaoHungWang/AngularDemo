@@ -14,6 +14,7 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
 import { ProductsComponent } from './products/products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
+
 //URL > Component
 const routes: Routes = [  
   {path:'',redirectTo:'/home',pathMatch:'full'},
@@ -36,7 +37,10 @@ children:[
 ]},
 {path:'product/list',component:ProductsComponent,title:'產品資料'},
 {path:'product/details/:id',component:ProductdetailsComponent,title:'產品詳細資料'},
-  {path:'**',component:PageNotFoundComponent}
+
+{path:'admin',
+loadComponent:()=>import('./admin.component').then(a=>a.AdminComponent)},
+{path:'**',component:PageNotFoundComponent}
   
 ];
 

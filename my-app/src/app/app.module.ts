@@ -23,6 +23,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +48,7 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule   
   ],
   providers: [],
   bootstrap: [AppComponent]
