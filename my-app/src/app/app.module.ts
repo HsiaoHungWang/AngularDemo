@@ -19,6 +19,8 @@ import { MemberComponent } from './member/member.component';
 import { PersonalComponent } from './personal/personal.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
     MemberComponent,
     PersonalComponent,
     ForgetpasswordComponent,
-    ChangepasswordComponent
+    ChangepasswordComponent,
+    ProductsComponent,
+    ProductdetailsComponent
   ],
   imports: [
     BrowserModule,

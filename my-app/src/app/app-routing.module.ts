@@ -11,6 +11,8 @@ import { MemberComponent } from './member/member.component';
 import { PersonalComponent } from './personal/personal.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 //URL > Component
 const routes: Routes = [  
@@ -32,12 +34,15 @@ children:[
   {path:'forget',component:ForgetpasswordComponent},
   {path:'change',component:ChangepasswordComponent}
 ]},
+{path:'product/list',component:ProductsComponent,title:'產品資料'},
+{path:'product/details/:id',component:ProductdetailsComponent,title:'產品詳細資料'},
   {path:'**',component:PageNotFoundComponent}
   
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    bindToComponentInputs: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
