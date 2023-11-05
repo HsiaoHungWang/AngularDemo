@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { XyzComponent } from './xyz.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     XyzComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
