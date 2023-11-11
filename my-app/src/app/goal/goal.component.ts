@@ -6,31 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent {
-  title:string = "公司目標...";
-  getName():string{
+  title: string = "公司目標...";
+  getName(): string {
     return "guest";
   }
-  isLogin:boolean = false;
-price:number = 1000;
-week:string[] = ["二","三"];
+  isLogin: boolean = false;
+  price: number = 1000;
+  week: string[] = ["二", "三"];
   // person:IUser = {
   //   name: "Jack",
   //   age: 30
   // }
   //person:IUser | null = null;
-  person:IUser[]=[
-    {
-        name: "Jack",
-        age: 30
-      },
-      {
-          name: "Mary",
-          age: 32
-        }
+  person: IUser[] = [
+    { name: "Jack", age: 30 },
+    { name: "Mary", age: 32 }
   ]
 }
 
-interface IUser{
+interface IUser {
   name: string,
   age?: number
 }
