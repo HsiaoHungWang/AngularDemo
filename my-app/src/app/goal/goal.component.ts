@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class GoalComponent {
   title: string = "公司目標...";
-  message:string = "";
+  message:string = "abcd";
   getName(): string {
     return "guest";
   }
@@ -29,9 +29,12 @@ export class GoalComponent {
   sayHi(name:string){
    alert("hi " + name);
   }
-  getValue(event:Event){
-   this.message = (event.target as HTMLInputElement).value;
-  }
+  // getValue(event:Event){
+  //  this.message = (event.target as HTMLInputElement).value;
+  // }
+  // setMessage(msg:any){
+  //   this.message = msg;
+  // }
 }
 
 interface IUser {

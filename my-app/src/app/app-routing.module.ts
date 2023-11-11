@@ -13,6 +13,7 @@ import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.compone
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { LoginComponent } from './login/login.component';
 
 
 //URL > Component
@@ -40,7 +41,9 @@ children:[
 
 {path:'admin',
 loadComponent:()=>import('./admin.component').then(a=>a.AdminComponent)},
-{path:'**',component:PageNotFoundComponent}
+{path:'login', component:LoginComponent},
+{path:'**',component:PageNotFoundComponent},
+
   
 ];
 

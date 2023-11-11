@@ -1,0 +1,25 @@
+<p>login works!</p>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <!-- <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)"> -->
+            <form  (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="email" [(ngModel)]="model.email" id="exampleInputEmail1" aria-describedby="emailHelp">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" [(ngModel)]="model.password" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1"  [(ngModel)]="model.rememberMe">
+              <label class="form-check-label" for="exampleCheck1" name="rememberMe">記住我</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+    <div class="col4"></div>
+</div>
+

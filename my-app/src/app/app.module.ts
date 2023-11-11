@@ -22,6 +22,7 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
 import { ProductsComponent } from './products/products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -45,7 +46,8 @@ import { FormsModule } from '@angular/forms';
     ForgetpasswordComponent,
     ChangepasswordComponent,
     ProductsComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
