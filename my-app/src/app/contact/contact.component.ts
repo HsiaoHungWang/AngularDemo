@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ContactComponent {
   message:string = "從父元件傳到子元件的資料";
   count:number = 0;
+  title:string = "aaaaaaaaaaa";
   //c 會接收到子元件傳過來的數字
   saveData(c:number):void{
    this.count = c;

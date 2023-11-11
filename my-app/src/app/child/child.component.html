@@ -1,3 +1,5 @@
 <p>child works!</p>
 <h2>子元件： {{ abc }}</h2>
 <button (click)="add()">add number</button>
+<h2>雙向繫結</h2>
+<input type="text" [(ngModel)]="title" (input)="changeTitle()" />

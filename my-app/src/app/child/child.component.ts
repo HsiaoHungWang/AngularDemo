@@ -12,6 +12,11 @@ abc:string = "";
 @Output()
 xyz = new EventEmitter<number>();
 
+//宣告父元件傳進來的屬性名稱
+@Input() title:string = "";  
+//事件名稱的規則為[屬性名稱+Change]
+@Output() titleChange =  new EventEmitter<string>();
+
 n:number = 10
 
 // ngOnInit(){
@@ -22,6 +27,10 @@ add(){
   this.n++;
   this.xyz.emit(this.n);
 
+}
+
+changeTitle(){
+this.titleChange.emit(this.title);
 }
 
 }

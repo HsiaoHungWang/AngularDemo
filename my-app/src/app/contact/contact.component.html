@@ -1,4 +1,5 @@
 <p>contact works!</p>
 <h2>父元件：數字來自於子元件 {{count}}</h2>
+<p>{{title}}</p>
 <hr />
-<app-child [abc]="message" (xyz)="saveData($event)"></app-child>
+<app-child [(title)]="title" [abc]="message" (xyz)="saveData($event)"></app-child>
