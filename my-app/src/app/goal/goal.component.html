@@ -6,3 +6,11 @@
 <p>星期{{week[1]}}</p>
 <p>{{ person[1].name }}您好，您 {{person[1].age}} 歲了</p> 
 <!-- <p>{{ person?.name }}</p> -->
+<hr />
+
+<img src="../../assets/Angular_full_color_logo.svg.png" />
+<img [src]="'../../assets/' + logo" />
+<img bind-src="'../../assets/' + logo" />
+<img src="{{'../../assets/' + logo}}" />
+
+<button disabled>button1</button>

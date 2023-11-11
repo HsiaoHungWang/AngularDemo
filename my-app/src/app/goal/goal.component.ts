@@ -22,6 +22,9 @@ export class GoalComponent {
     { name: "Jack", age: 30 },
     { name: "Mary", age: 32 }
   ]
+
+  logo:string = "Angular_full_color_logo.svg.png";
+  isValid:boolean = false;
 }
 
 interface IUser {
