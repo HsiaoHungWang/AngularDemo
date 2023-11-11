@@ -1,1 +1,24 @@
-<p>history works!</p>
+<h2>history works!</h2>
+<h2 style="color:blue;font-size:24px">一般樣式的使用</h2>
+<h2 [ngStyle]="{'color':'blue','font-size.px':24}">ngStyle的使用</h2>
+<h2 [style.border]="isBorder ? '1px solid green':'none'">style.border</h2>
+
+<h2 class="bgColor normal">一般 Class 的使用</h2>
+<h2 [ngClass]="'bgColor normal'">ngClass 的使用1</h2>
+<h2 [ngClass]="{'bgColor': true, 'normal': false}">ngClass 的使用2</h2>
+<hr />
+<input type="checkbox" [(ngModel)]="isBold">
+<label style="font-weight:bold">粗體</label>
+
+<input type="checkbox" [(ngModel)]="isItalic">
+<label style="font-style: italic;">斜體</label>
+
+<input type="checkbox" [(ngModel)]="isUnderline">
+<label style="text-decoration: underline;">下底線</label>
+<button (click)="large()">+</button>
+<button (click)="small()">-</button>
+<label>顏色</label>
+<input type="color" [(ngModel)]="color">
+<hr />
+<p [ngClass]="{'boldStyle':isBold,'textStyle':isUnderline,'italicStyle':isItalic}"
+  [ngStyle]="{'font-size.px':size,'color':color}">這是一段要顯示樣式的文字</p>

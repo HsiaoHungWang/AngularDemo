@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./history.component.css']
 })
 export class HistoryComponent {
+  isBorder:boolean=true;
+  isBold:boolean = false;
+  isUnderline:boolean = false;
+  isItalic:boolean=false;
+  size:number = 16;
+  color:string = 'black';
 
+  large(){
+    this.size += 2;
+  }
+  small(){
+    this.size -= 2;
+  }
 }
