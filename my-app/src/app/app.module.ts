@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { registerLocaleData } from '@angular/common';
+import localeTw from '@angular/common/locales/zh';
+import localeJa from '@angular/common/locales/ja';
+import localeKo from '@angular/common/locales/ko';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -59,4 +63,10 @@ import { ChildComponent } from './child/child.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    registerLocaleData(localeTw,'tW');
+    registerLocaleData(localeJa,'ja');
+    registerLocaleData(localeKo,'ko');
+  }
+ }
