@@ -27,3 +27,8 @@
 <p>{{12.345 | currency:'TWD':false}}</p>
 <p>{{12.345 | currency:'JPY':true}}</p>
 <p>{{12.345 | currency:'KRW':true}}</p>
+
+<hr />
+<h2>自訂Pipe的使用</h2>
+<p>{{"Be sure to use an appropriate type attribute on all inputs" | truncate:5:'...'}}</p>
+<p>{{"4111411141114111" | cardmask:'*':3:4}}</p>

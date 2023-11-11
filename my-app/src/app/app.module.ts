@@ -28,6 +28,8 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ChildComponent } from './child/child.component';
+import { TruncatePipe } from './truncate.pipe';
+import { CardmaskPipe } from './cardmask.pipe';
 
 
 
@@ -53,7 +55,9 @@ import { ChildComponent } from './child/child.component';
     ProductsComponent,
     ProductdetailsComponent,
     LoginComponent,
-    ChildComponent
+    ChildComponent,
+    TruncatePipe,
+    CardmaskPipe
   ],
   imports: [
     BrowserModule,
