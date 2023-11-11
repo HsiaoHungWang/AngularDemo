@@ -1,1 +1,18 @@
 <p>award works!</p>
+<p>{{"angular developer"}}</p>
+<p>{{"angular developer" | uppercase}}</p>
+<p>{{"angular developer" | titlecase}}</p>
+<p>{{"angular developer" | titlecase | slice:0:7}}</p>
+<hr />
+<p>{{3.1415926}}</p>
+<p>{{3.1415926 | number}}</p>
+<p>{{3.1415926 | number:'3.1-5'}}</p>
+<hr />
+<p>{{today}}</p>
+<p>{{today | date}}</p>
+<p>{{today | date:'full'}}</p>
+<p>{{today | date:'fullDate'}}</p>
+<p>{{today | date:'fullTime'}}</p>
+<p>{{today | date:'yyyy/MM/dd EEEE'}}</p>
+<p>{{today | date:'HH:mm:ss a'}}</p>
+<p>巴黎：{{today | date:'full':'UTC+2'}}</p>

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./award.component.css']
 })
 export class AwardComponent {
-
+  today:Date = new Date();
 }
