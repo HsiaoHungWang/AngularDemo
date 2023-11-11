@@ -21,6 +21,10 @@
 <hr />
 <button (click)="sayHi('Jack')">click3</button>
 
-<input type="text" (input)="getValue($event)" />
+<!-- <input type="text" (input)="getValue($event)" /> -->
+
+
+<input  type="text" [(ngModel)]="message" />
 <p>{{ message }}</p>
+
 
