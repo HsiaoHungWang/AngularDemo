@@ -13,4 +13,6 @@
 <img bind-src="'../../assets/' + logo" />
 <img src="{{'../../assets/' + logo}}" />
 
-<button disabled>button1</button>
+<button [disabled]="!isValid">[disabled]</button>
+<button bind-disabled="!isValid">bind-disabled</button>
+<button disabled="{{!isValid}}">interpolation disabled</button>
