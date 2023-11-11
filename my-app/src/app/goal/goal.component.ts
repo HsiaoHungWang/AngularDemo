@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class GoalComponent {
   title: string = "公司目標...";
+  message:string = "";
   getName(): string {
     return "guest";
   }
@@ -25,6 +26,12 @@ export class GoalComponent {
 
   logo:string = "Angular_full_color_logo.svg.png";
   isValid:boolean = false;
+  sayHi(name:string){
+   alert("hi " + name);
+  }
+  getValue(event:Event){
+   this.message = (event.target as HTMLInputElement).value;
+  }
 }
 
 interface IUser {

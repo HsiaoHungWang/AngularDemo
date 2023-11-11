@@ -12,7 +12,15 @@
 <img [src]="'../../assets/' + logo" />
 <img bind-src="'../../assets/' + logo" />
 <img src="{{'../../assets/' + logo}}" />
-
+<hr />
 <button [disabled]="!isValid">[disabled]</button>
 <button bind-disabled="!isValid">bind-disabled</button>
 <button disabled="{{!isValid}}">interpolation disabled</button>
+<button [disabled]="true">click1</button>
+<button [disabled]="!isValid">click2</button>
+<hr />
+<button (click)="sayHi('Jack')">click3</button>
+
+<input type="text" (input)="getValue($event)" />
+<p>{{ message }}</p>
+
