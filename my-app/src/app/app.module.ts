@@ -23,6 +23,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { ChildComponent } from './child/child.component';
 
 
 
@@ -47,7 +48,8 @@ import { LoginComponent } from './login/login.component';
     ChangepasswordComponent,
     ProductsComponent,
     ProductdetailsComponent,
-    LoginComponent
+    LoginComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
