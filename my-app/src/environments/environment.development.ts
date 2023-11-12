@@ -1,3 +1,3 @@
 export const environment = {
-    apiUrl:"http://192.168.33.174/api"
+    apiUrl: "https://localhost:7178/api"
 };
