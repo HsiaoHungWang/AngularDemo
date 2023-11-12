@@ -16,6 +16,7 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
 import { LoginComponent } from './login/login.component';
 import { DirectivedemoComponent } from './directivedemo/directivedemo.component';
 import { RegisterComponent } from './register/register.component';
+import { ShipperMgmtComponent } from './shipper-mgmt/shipper-mgmt.component';
 
 
 //URL > Component
@@ -46,6 +47,7 @@ children:[
 loadComponent:()=>import('./admin.component').then(a=>a.AdminComponent)},
 {path:'login', component:LoginComponent},
 {path:'register', component:RegisterComponent},
+{path:'shipper', component:ShipperMgmtComponent},
 {path:'**',component:PageNotFoundComponent},
 
   

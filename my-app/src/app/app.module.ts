@@ -4,7 +4,7 @@ import { registerLocaleData } from '@angular/common';
 import localeTw from '@angular/common/locales/zh-Hant';
 import localeJa from '@angular/common/locales/ja';
 import localeKo from '@angular/common/locales/ko';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first.component';
@@ -35,6 +35,7 @@ import { HighlightDirective } from './highlight.directive';
 import { AutouppercaseDirective } from './autouppercase.directive';
 import { IsLoginDirective } from './is-login.directive';
 import { RegisterComponent } from './register/register.component';
+import { ShipperMgmtComponent } from './shipper-mgmt/shipper-mgmt.component';
 
 
 
@@ -67,13 +68,15 @@ import { RegisterComponent } from './register/register.component';
     HighlightDirective,
     AutouppercaseDirective,
     IsLoginDirective,
-    RegisterComponent
+    RegisterComponent,
+    ShipperMgmtComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
