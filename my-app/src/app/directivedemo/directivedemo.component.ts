@@ -12,7 +12,6 @@ export class DirectivedemoComponent {
     {"cityCode":"KLU", "cityName":"基隆市"},
     {"cityCode":"TPH", "cityName":"新北市"},
     {"cityCode":"TPE", "cityName":"台北市"},
-    {"cityCode":"TYC", "cityName":"桃園市"}
-    
+    {"cityCode":"TYC", "cityName":"桃園市"}    
   ]
 }

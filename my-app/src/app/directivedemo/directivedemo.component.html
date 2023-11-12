@@ -10,7 +10,16 @@
     [ngClass]="{even:isEven,last:isLast}">{{i+1}}/{{total}}. {{city.cityName}}</li>
 </ul>
 
-<select>
-    <option *ngFor="let city of cities" [value]="city.cityCode" [selected]="city.cityCode===selectedCode">{{city.cityName}}</option>
+<select [(ngModel)]="selectedCode">
+    <option *ngFor="let city of cities" 
+    [value]="city.cityCode">{{city.cityName}}</option>
 </select>
+<div [ngSwitch]="selectedCode">
+    <div *ngSwitchCase="'KLU'">基隆市介紹</div>
+    <div *ngSwitchCase="'TPH'">新北市介紹</div>
+    <div *ngSwitchCase="'TPE'">台北市介紹</div>
+    <div *ngSwitchCase="'TYC'">桃園市介紹</div>
+    <div *ngSwitchDefault>不知</div>
+</div>
+
 
