@@ -32,6 +32,7 @@ import { TruncatePipe } from './truncate.pipe';
 import { CardmaskPipe } from './cardmask.pipe';
 import { DirectivedemoComponent } from './directivedemo/directivedemo.component';
 import { HighlightDirective } from './highlight.directive';
+import { AutouppercaseDirective } from './autouppercase.directive';
 
 
 
@@ -61,7 +62,8 @@ import { HighlightDirective } from './highlight.directive';
     TruncatePipe,
     CardmaskPipe,
     DirectivedemoComponent,
-    HighlightDirective
+    HighlightDirective,
+    AutouppercaseDirective
   ],
   imports: [
     BrowserModule,
