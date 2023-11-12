@@ -26,4 +26,10 @@
 <h2 [appHighlight]="'cyan'">自訂屬性指令 directive</h2>
 <input type="text" appAutouppercase />
 
+<!-- <div *appIsLogin="isLogin">User 您好! 登出</div>
+<div *appIsLogin="!isLogin">請先登入</div> -->
+
+<div *appIsLogin="isLogin;then other">User 您好! 登出</div>
+<ng-template #other><div>請先登入</div></ng-template>
+
 

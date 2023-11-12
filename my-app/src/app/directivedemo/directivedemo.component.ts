@@ -14,4 +14,5 @@ export class DirectivedemoComponent {
     {"cityCode":"TPE", "cityName":"台北市"},
     {"cityCode":"TYC", "cityName":"桃園市"}    
   ]
+  isLogin:boolean = true;
 }

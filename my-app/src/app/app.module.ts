@@ -33,6 +33,7 @@ import { CardmaskPipe } from './cardmask.pipe';
 import { DirectivedemoComponent } from './directivedemo/directivedemo.component';
 import { HighlightDirective } from './highlight.directive';
 import { AutouppercaseDirective } from './autouppercase.directive';
+import { IsLoginDirective } from './is-login.directive';
 
 
 
@@ -63,7 +64,8 @@ import { AutouppercaseDirective } from './autouppercase.directive';
     CardmaskPipe,
     DirectivedemoComponent,
     HighlightDirective,
-    AutouppercaseDirective
+    AutouppercaseDirective,
+    IsLoginDirective
   ],
   imports: [
     BrowserModule,
