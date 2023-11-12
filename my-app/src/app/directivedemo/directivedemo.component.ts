@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class DirectivedemoComponent {
   show:boolean = true;
-
+  selectedCode:string = "TPE";
   cities:any = [
-    {"cityCode":"KLU", "cityName":"基市"},
+    {"cityCode":"KLU", "cityName":"基隆市"},
     {"cityCode":"TPH", "cityName":"新北市"},
     {"cityCode":"TPE", "cityName":"台北市"},
     {"cityCode":"TYC", "cityName":"桃園市"}
