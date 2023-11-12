@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-
+import { environment } from '../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   message:string = "這是一個服務";
-  constructor() { }
+  constructor() {
+    console.log(environment.apiUrl);
+   }
+  
 }
