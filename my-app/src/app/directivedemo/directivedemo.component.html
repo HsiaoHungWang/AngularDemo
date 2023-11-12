@@ -1,0 +1,11 @@
+<p>directivedemo works!</p>
+<button (click)="show=!show">{{show? "hide":"show"}}</button>
+<div *ngIf="show;else elseBlock">這段內容會顯示出來</div>
+<ng-template #elseBlock><div>這裡也有一段內容</div></ng-template>
+<hr />
+<p>{{ cities | json }}</p>
+<ul>
+    <!-- <li>{{ cities[0] | json }} {{cities[0].cityName}}</li> -->
+    <li *ngFor="let city of cities;index as i;count as total;even as isEven;last as isLast" 
+    [ngClass]="{even:isEven,last:isLast}">{{i+1}}/{{total}}. {{city.cityName}}</li>
+</ul>

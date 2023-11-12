@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { registerLocaleData } from '@angular/common';
-import localeTw from '@angular/common/locales/zh';
+import localeTw from '@angular/common/locales/zh-Hant';
 import localeJa from '@angular/common/locales/ja';
 import localeKo from '@angular/common/locales/ko';
 
@@ -30,6 +30,7 @@ import { LoginComponent } from './login/login.component';
 import { ChildComponent } from './child/child.component';
 import { TruncatePipe } from './truncate.pipe';
 import { CardmaskPipe } from './cardmask.pipe';
+import { DirectivedemoComponent } from './directivedemo/directivedemo.component';
 
 
 
@@ -57,7 +58,8 @@ import { CardmaskPipe } from './cardmask.pipe';
     LoginComponent,
     ChildComponent,
     TruncatePipe,
-    CardmaskPipe
+    CardmaskPipe,
+    DirectivedemoComponent
   ],
   imports: [
     BrowserModule,

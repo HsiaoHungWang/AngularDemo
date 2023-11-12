@@ -14,6 +14,7 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
 import { ProductsComponent } from './products/products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { LoginComponent } from './login/login.component';
+import { DirectivedemoComponent } from './directivedemo/directivedemo.component';
 
 
 //URL > Component
@@ -25,7 +26,8 @@ const routes: Routes = [
     {path:'', component:GoalComponent},
     {path:'goal', component:GoalComponent}, //http://localhost/about/goal
     {path:'award', component:AwardComponent}, 
-    {path:'history', component:HistoryComponent}
+    {path:'history', component:HistoryComponent}, 
+    {path:'directive', component:DirectivedemoComponent}
 
   ]},
   {path:'contact',component:ContactComponent,title:'聯絡我們'},
