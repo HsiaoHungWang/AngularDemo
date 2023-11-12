@@ -31,6 +31,7 @@ import { ChildComponent } from './child/child.component';
 import { TruncatePipe } from './truncate.pipe';
 import { CardmaskPipe } from './cardmask.pipe';
 import { DirectivedemoComponent } from './directivedemo/directivedemo.component';
+import { HighlightDirective } from './highlight.directive';
 
 
 
@@ -59,7 +60,8 @@ import { DirectivedemoComponent } from './directivedemo/directivedemo.component'
     ChildComponent,
     TruncatePipe,
     CardmaskPipe,
-    DirectivedemoComponent
+    DirectivedemoComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

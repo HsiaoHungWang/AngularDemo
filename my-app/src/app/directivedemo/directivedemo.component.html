@@ -1,4 +1,5 @@
-<p>directivedemo works!</p>
+<h2 appHighlight>directivedemo works!</h2>
+<h2 [appHighlight]="'lightgreen'">light green directivedemo works!</h2>
 <button (click)="show=!show">{{show? "hide":"show"}}</button>
 <div *ngIf="show;else elseBlock">這段內容會顯示出來</div>
 <ng-template #elseBlock><div>這裡也有一段內容</div></ng-template>
