@@ -1,21 +1,33 @@
 <p>register works!</p>
-<form>
-    <input type="text" [formControl]="userName" />
-    <div class="alert alert-danger" *ngIf="userName.invalid && (userName.touched || userName.dirty)">
-        <div *ngIf="userName.errors?.['required']">姓名一定要輸入</div>
-        <div *ngIf="userName.errors?.['minlength']">姓名至少6個字元</div>
-        <div *ngIf="userName.errors?.['maxlength']">姓名至多12個字元</div>
+<form [formGroup]="registerForm" (ngSubmit)="submit()">
+    <label>姓名：</label>
+    <input type="text" formControlName="userName" /><br />
+    <div class="alert alert-danger" *ngIf="f['userName'].invalid && (f['userName'].touched || f['userName'].dirty)">
+        <div *ngIf="f['userName'].errors?.['required']">姓名一定要輸入</div>
+        <div *ngIf="f['userName'].errors?.['minlength']">姓名至少6個字元</div>
+        <div *ngIf="f['userName'].errors?.['maxlength']">姓名至多12個字元</div>
     </div>
-
+    <label>電子郵件：</label>
+    <input type="text" formControlName="userEmail" /><br />
+    <div class="alert alert-danger" *ngIf="f['userEmail'].invalid && (f['userEmail'].touched || f['userEmail'].dirty)">
+        <div *ngIf="f['userEmail'].errors?.['required']">Email一定要輸入</div>
+        <div *ngIf="f['userEmail'].errors?.['email']">Email格式錯誤</div>        
+    </div>
+    <label>行動電話：</label>
+    <input type="text" formControlName="userPhone" /><br />
+    <div class="alert alert-danger" *ngIf="f['userPhone'].invalid && (f['userPhone'].touched || f['userPhone'].dirty)">
+        <div *ngIf="f['userPhone'].errors?.['required']">電話一定要輸入</div>
+        <div *ngIf="f['userPhone'].errors?.['pattern']">電話格式錯誤0911-222-333</div>        
+    </div>
     <!-- <input type="email" [formControl]="userEmail" /> -->
-
-    <button (click)="send()">送出</button>
+    <button type="submit" [disabled]="registerForm.invalid">送出</button>
+    <!-- <button  (click)="send()">送出</button> -->
 </form>
 
-<p>userName：{{userName.value}}</p>
+<!-- <p>userName：{{userName.value}}</p>
 <p>valid: {{userName.valid}}</p> 
 <p>invalid: {{userName.invalid}}</p>
 <p>touched: {{userName.touched}}</p>
 <p>untouched: {{userName.untouched}}</p>
 <p>pristine: {{userName.pristine}}</p>  
-<p>dirty: {{userName.dirty}}</p>
+<p>dirty: {{userName.dirty}}</p> -->
