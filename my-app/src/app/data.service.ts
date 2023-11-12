@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
 import { HttpClient } from '@angular/common/http';
+import { IShipper } from './models/ishipper';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,8 +14,18 @@ export class DataService {
    // console.log(environment.apiUrl);
    }
 
-   getShippers(){
-    return this.http.get(this.apiUrl);
+   getShippers():Observable<IShipper[]>{
+    return this.http.get<IShipper[]>(this.apiUrl);
    }
+   addShipper(shipper:IShipper):Observable<IShipper>{
+    return this.http.post<IShipper>(this.apiUrl, shipper);
+   }   
+   deleteShipper(shipperId:number):Observable<{}>{
+    return this.http.delete(`${this.apiUrl}/${shipperId}`);
+   }
+   putShipper(shipper:IShipper):Observable<IShipper>{
+    return this.http.put<IShipper>(`${this.apiUrl}/${shipper.shipperId}`, shipper);
+   }
+
   
 }
