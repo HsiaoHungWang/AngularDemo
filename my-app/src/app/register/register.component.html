@@ -1,0 +1,21 @@
+<p>register works!</p>
+<form>
+    <input type="text" [formControl]="userName" />
+    <div class="alert alert-danger" *ngIf="userName.invalid && (userName.touched || userName.dirty)">
+        <div *ngIf="userName.errors?.['required']">姓名一定要輸入</div>
+        <div *ngIf="userName.errors?.['minlength']">姓名至少6個字元</div>
+        <div *ngIf="userName.errors?.['maxlength']">姓名至多12個字元</div>
+    </div>
+
+    <!-- <input type="email" [formControl]="userEmail" /> -->
+
+    <button (click)="send()">送出</button>
+</form>
+
+<p>userName：{{userName.value}}</p>
+<p>valid: {{userName.valid}}</p> 
+<p>invalid: {{userName.invalid}}</p>
+<p>touched: {{userName.touched}}</p>
+<p>untouched: {{userName.untouched}}</p>
+<p>pristine: {{userName.pristine}}</p>  
+<p>dirty: {{userName.dirty}}</p>

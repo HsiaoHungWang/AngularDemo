@@ -25,7 +25,7 @@ import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.compone
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ChildComponent } from './child/child.component';
 import { TruncatePipe } from './truncate.pipe';
@@ -34,6 +34,7 @@ import { DirectivedemoComponent } from './directivedemo/directivedemo.component'
 import { HighlightDirective } from './highlight.directive';
 import { AutouppercaseDirective } from './autouppercase.directive';
 import { IsLoginDirective } from './is-login.directive';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -65,12 +66,14 @@ import { IsLoginDirective } from './is-login.directive';
     DirectivedemoComponent,
     HighlightDirective,
     AutouppercaseDirective,
-    IsLoginDirective
+    IsLoginDirective,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule  
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

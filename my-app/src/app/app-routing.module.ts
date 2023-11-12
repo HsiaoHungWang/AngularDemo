@@ -15,6 +15,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { LoginComponent } from './login/login.component';
 import { DirectivedemoComponent } from './directivedemo/directivedemo.component';
+import { RegisterComponent } from './register/register.component';
 
 
 //URL > Component
@@ -44,6 +45,7 @@ children:[
 {path:'admin',
 loadComponent:()=>import('./admin.component').then(a=>a.AdminComponent)},
 {path:'login', component:LoginComponent},
+{path:'register', component:RegisterComponent},
 {path:'**',component:PageNotFoundComponent},
 
   
