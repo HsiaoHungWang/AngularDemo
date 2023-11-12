@@ -36,6 +36,7 @@ import { AutouppercaseDirective } from './autouppercase.directive';
 import { IsLoginDirective } from './is-login.directive';
 import { RegisterComponent } from './register/register.component';
 import { ShipperMgmtComponent } from './shipper-mgmt/shipper-mgmt.component';
+import { ShipperAddComponent } from './shipper-add/shipper-add.component';
 
 
 
@@ -69,7 +70,8 @@ import { ShipperMgmtComponent } from './shipper-mgmt/shipper-mgmt.component';
     AutouppercaseDirective,
     IsLoginDirective,
     RegisterComponent,
-    ShipperMgmtComponent
+    ShipperMgmtComponent,
+    ShipperAddComponent
   ],
   imports: [
     BrowserModule,

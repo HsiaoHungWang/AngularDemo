@@ -16,10 +16,15 @@ shipperUpdateData:IShipper = {
   "companyName": "xyz",
   "phone": "(02) 1111-9831"
 }
+aShipper:IShipper = {
+  "shipperId":0,
+  "companyName": "",
+  "phone": ""
+}
 ngOnInit(){
   //this.createShipper();
   //this.updateShipper();
-  this.deleteShipper();
+  //this.deleteShipper();
   this.getShippers();
 }
 
@@ -37,8 +42,23 @@ createShipper(){
 updateShipper(){
   this.data.putShipper(this.shipperUpdateData).subscribe(shipper=>console.log(shipper));
 }
-deleteShipper(){
-  this.data.deleteShipper(9).subscribe(shipper=>console.log(shipper));
+deleteShipper(shipperId:any){
+  if(window.confirm("真的要刪除嗎?")){
+    this.data.deleteShipper(shipperId).subscribe(shipper=>{this.getShippers()});
+  }
+  
+}
+edit(shipper:IShipper){
+  this.aShipper = shipper;
+  console.log(this.aShipper);
+}
+
+saveData(shipper:IShipper){
+  if(shipper.shipperId === 0){
+    console.log("新增");
+  }else{
+    console.log("修改");
+  }
 }
 
 }

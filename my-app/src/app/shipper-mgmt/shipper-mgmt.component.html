@@ -1,17 +1,27 @@
 <p>shipper-mgmt works!</p>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>ShipperID</th>
-            <th>CompanyName</th>
-            <th>Phone</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let shipper of shippers">
-        <td>{{shipper.shipperId}}</td>
-        <td>{{shipper.companyName}}</td>
-        <td>{{shipper.phone}}</td>
-      </tr>
-    </tbody>
-</table>
+<div class="row">
+    <div class="col-8"><table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ShipperID</th>
+                <th>CompanyName</th>
+                <th>Phone</th>
+                <th>編輯</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let shipper of shippers">
+            <td>{{shipper.shipperId}}</td>
+            <td>{{shipper.companyName}}</td>
+            <td>{{shipper.phone}}</td>
+            <td>
+                <button class="btn btn-secondary" (click)="edit(shipper)">修改</button>
+                <button class="btn btn-danger" (click)="deleteShipper(shipper.shipperId)">刪除</button>
+            </td>
+          </tr>
+        </tbody>
+    </table></div>
+    <div class="col-4">
+        <app-shipper-add [shipperData]="aShipper" (add)="saveData($event)"></app-shipper-add>
+    </div>
+</div>

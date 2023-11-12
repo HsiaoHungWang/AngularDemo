@@ -1,0 +1,13 @@
+<p>shipper-add works!</p>
+<form [formGroup]="addForm" (ngSubmit)="submit()">
+    <input type="hidden" formControlName="shipperId">
+    <div class="mb-3">
+        <label>公司名稱</label>
+        <input type="text" class="form-control" formControlName="companyName" />
+    </div>
+    <div class="mb-3">
+        <label>公司電話</label>
+        <input type="text" class="form-control" formControlName="phone" />
+    </div>
+    <button type="submit">送出</button>
+</form>
