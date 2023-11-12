@@ -1,1 +1,17 @@
 <p>shipper-mgmt works!</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ShipperID</th>
+            <th>CompanyName</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let shipper of shippers">
+        <td>{{shipper.shipperId}}</td>
+        <td>{{shipper.companyName}}</td>
+        <td>{{shipper.phone}}</td>
+      </tr>
+    </tbody>
+</table>

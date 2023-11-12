@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
+import { IShipper } from '../models/ishipper';
 
 @Component({
   selector: 'app-shipper-mgmt',
@@ -8,11 +9,15 @@ import { DataService } from '../data.service';
 })
 export class ShipperMgmtComponent {
 constructor(private data:DataService){}
+shippers:IShipper[] | null = null;
 ngOnInit(){
   this.getShippers();
 }
 
 getShippers(){
-  this.data.getShippers().subscribe(shippers=>console.log(shippers));
+  this.data.getShippers().subscribe(shippers=>{
+    this.shippers = shippers as IShipper[];
+    console.log(this.shippers)
+  });
 }
 }
